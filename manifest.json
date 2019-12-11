@@ -1,0 +1,7 @@
+{
+  "name": "CipherCord",
+  "version": "0.0.0",
+  "description": "Secure E2EE chatting through Discord, with timed messages, secure uploads, and more.",
+  "author": "Bowser65",
+  "license": "AGPL-3.0"
+}
