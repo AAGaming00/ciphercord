@@ -1,0 +1,27 @@
+.ciphercord {
+  &-passphrase {
+    .contents > div {
+      margin-top: 20px;
+
+      div + div {
+        margin-top: 10px;
+      }
+
+      > :last-child {
+        display: none;
+      }
+    }
+
+    .red {
+      color: #f04747;
+    }
+
+    .green {
+      color: #43b581;
+    }
+
+    button + button {
+      margin-right: 15px;
+    }
+  }
+}

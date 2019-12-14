@@ -16,14 +16,41 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-const { Plugin } = require('powercord/entities');
+const { resolve } = require('path')
+const { React, getModule } = require('powercord/webpack')
+const { Plugin } = require('powercord/entities')
+const { sleep } = require('powercord/util')
+const { open: openModal } = require('powercord/modal')
+
+const Database = require('./src/Database')
+const PassphraseModal = require('./components/PassphraseModal')
 
 module.exports = class CipherCord extends Plugin {
-  startPlugin () {
-    // OwO
+  constructor () {
+    super()
+    this.database = new Database(this.settings)
+  }
+
+  async startPlugin () {
+    this.loadCSS(resolve(__dirname, 'style.scss'))
+
+    this.injectMessages()
+    this.injectChatBar()
+    const userModule = await getModule([ 'getCurrentUser' ])
+    while (!userModule.getCurrentUser()) await sleep(10)
+
+    openModal(() => React.createElement(PassphraseModal, { database: this.database }))
   }
 
   pluginWillUnload () {
     // UwU
   }
-};
+
+  async injectMessages () {
+    // owo
+  }
+
+  async injectChatBar () {
+    // owo
+  }
+}

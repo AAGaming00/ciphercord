@@ -1,0 +1,17 @@
+{
+  "name": "ciphercord",
+  "version": "1.0.0",
+  "description": "Secure E2EE chatting through Discord, with timed messages, secure uploads, and more.",
+  "main": "index.js",
+  "repository": "git@github.com:Bowser65/ciphercord",
+  "author": "Bowser65 <contact.bowser65@gmail.com>",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
