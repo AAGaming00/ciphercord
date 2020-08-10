@@ -32,7 +32,7 @@ module.exports = class CipherCord extends Plugin {
   }
 
   async startPlugin () {
-    this.loadCSS(resolve(__dirname, 'style.scss'))
+    this.loadStylesheet(resolve(__dirname, 'style.scss'))
 
     this.injectMessages()
     this.injectChatBar()
